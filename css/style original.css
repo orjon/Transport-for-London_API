@@ -1,0 +1,215 @@
+Transport for London
+R0  G25  B168
+
+Emirates Air Line
+R220 G36 B31
+
+London Buses
+R220 G36 B31
+
+Docklands Light Railway
+R0 G175 B173
+
+
+London Overground
+R239 G123 B16
+
+Bakerloo line
+R178 G99 B0
+
+Central line
+R220 G36 B31
+
+Circle line
+R255 G211 B41
+
+District line
+R0 G125 B50
+
+Northern
+R0 G0 B0
+
+Metropolitan line
+R155 G0 B88
+
+Jubilee line
+R161 G165 B167
+
+H'smith & City line
+R244 G169 B190
+
+Piccadilly line
+R0 G25 B168
+
+Victoria
+R0 G152 B216
+
+Waterloo & City line
+R147 G206 B186
+
+
+
+:root {
+  --layout-border: 0px;
+  --entity-margin: 20px;
+}
+
+* {
+	box-sizing: border-box;
+  margin: 0px;
+	font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color:blue;
+}
+
+h4 {
+  color: grey;
+  font-weight: 400;
+}
+
+
+
+body {
+	background-color: dodgerblue;
+  padding: var(--entity-margin);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+}
+
+
+footer {
+	border: var(--layout-border) solid yellow;
+}
+
+footer a {
+  color:black;
+}
+
+header {
+  max-width: 750px;
+  width: 100%;
+	border: var(--layout-border) solid yellow;
+  margin-bottom: var(--entity-margin);
+}
+
+main {
+    max-width: 750px;
+    width: 100%;
+    flex: 1;
+    border: var(--layout-border) solid yellow;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: var(--entity-margin);
+    grid-row-gap: var(--entity-margin);
+}
+
+@media screen and (min-width: 1200px){
+  header {
+    max-width: 1400px;
+  }
+
+  main {
+      max-width: 1400px;
+      grid-template-columns: 1fr 1fr;
+
+  }
+
+  .doubleWidthCard {
+    grid-column: 1 / 3;
+  }
+}
+
+
+.card, form {
+  font-size: 12pt;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(102, 102, 153,0.25);
+  box-shadow: 0 0 10px 0 rgba(102, 102, 153,0.75);
+  height: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .doubleWidthCard {
+  grid-column: 1 / 2;
+} */
+
+.card-row, .form-row {
+    border: var(--layout-border) solid lightblue;
+    padding: 10px 0 0 0;
+    display: flex;
+}
+
+
+.card-row label, .form-row label{
+  padding-right: 10px;
+}
+
+.card-row input, .form-row input {
+  font-size: 12pt;
+  outline: none;
+  flex: 1;
+  height: 20px;
+}
+
+.card-row.last, .form-row.last {
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+
+button {
+  height: 29px;
+  outline: none;
+  align-items: right;
+  font-size: 10pt;
+  padding: 7px;
+  border: 0px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+button.reset{
+    background-color: red;
+    margin-right: 10px;
+}
+
+button.submit {
+  background-color: dodgerblue;
+}
+
+button.info {
+  background-color: orange;
+}
+
+select {
+  flex: 1;
+  outline: none;
+  background-color: #eeeeee;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}

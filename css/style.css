@@ -1,17 +1,12 @@
-:root {
-  --layout-border: 0px;
-  --entity-margin: 20px;
-}
-
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0px;
-	font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 a {
   text-decoration: none;
-  color:blue;
+  color: black;
 }
 
 h4 {
@@ -19,146 +14,122 @@ h4 {
   font-weight: 400;
 }
 
-
-
 body {
-	background-color: dodgerblue;
-  padding: var(--entity-margin);
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+  background-color: #0019a8;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-}
-
-
-footer {
-	border: var(--layout-border) solid yellow;
-}
-
-footer a {
-  color:black;
+  border: 0px solid cyan;
 }
 
 header {
-  max-width: 750px;
-  width: 100%;
-	border: var(--layout-border) solid yellow;
-  margin-bottom: var(--entity-margin);
+  width: 400px;
+  border: 0px solid yellow;
+  margin-bottom: 20px;
 }
 
 main {
-    max-width: 750px;
-    width: 100%;
-    flex: 1;
-    border: var(--layout-border) solid yellow;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: var(--entity-margin);
-    grid-row-gap: var(--entity-margin);
+  color: black;
+  width: 400px;
+  flex: 1;
+  border: 0px solid yellow;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
-@media screen and (min-width: 1200px){
-  header {
-    max-width: 1400px;
+footer {
+  margin: 10px 0px;
+  border: 0px solid yellow;
+}
+footer a {
+  color: white;
+}
+
+@media screen and (min-width: 860px) {
+  header, footer {
+    width: 820px;
   }
 
   main {
-      max-width: 1400px;
-      grid-template-columns: 1fr 1fr;
-
-  }
-
-  .doubleWidthCard {
-    grid-column: 1 / 3;
+    width: 820px;
+    grid-template-columns: 1fr 1fr;
   }
 }
+@media screen and (min-width: 1280px) {
+  header, footer {
+    width: 1240px;
+  }
 
+  main, footer {
+    width: 1240px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1700px) {
+  header, footer {
+    width: 1660px;
+  }
 
-.card, form {
+  main {
+    width: 1660px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.card {
   font-size: 12pt;
-  background-color: white;
-  border-radius: 20px;
-  border: 1px solid rgba(102, 102, 153,0.25);
-  box-shadow: 0 0 10px 0 rgba(102, 102, 153,0.75);
+  background-color: #eee;
+  border-radius: 0px;
+  /* border: 1px solid rgba(0, 0, 0,0.9); */
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
   height: 100%;
   padding: 1em;
+}
+
+.lines .line, .lines form {
   display: flex;
   flex-direction: column;
 }
-
-/* .doubleWidthCard {
-  grid-column: 1 / 2;
-} */
-
-.card-row, .form-row {
-    border: var(--layout-border) solid lightblue;
-    padding: 10px 0 0 0;
-    display: flex;
+.lines .line .details, .lines form .details {
+  border: 0px solid dodgerblue;
+  width: 100%;
+  height: 100%;
 }
-
-
-.card-row label, .form-row label{
-  padding-right: 10px;
+.lines .line .details .row, .lines form .details .row {
+  border: 0px solid lightblue;
+  display: flex;
+  flex-direction: row;
 }
-
-.card-row input, .form-row input {
-  font-size: 12pt;
-  outline: none;
+.lines .line .details .row .labels, .lines form .details .row .labels {
+  width: 25%;
+  text-align: right;
+  padding-right: 7px;
+  font-weight: 600;
+}
+.lines .line .details .row .data, .lines form .details .row .data {
   flex: 1;
-  height: 20px;
+}
+.lines .line .details .row img, .lines form .details .row img {
+  margin: 10px auto;
+  width: 50%;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+.lines .line .details .row p, .lines form .details .row p {
+  font-size: 0.8em;
+  border: 0px solid orange;
+  word-wrap: break-word;
 }
 
-.card-row.last, .form-row.last {
-  justify-content: flex-end;
-  align-self: flex-end;
-  margin-top: auto;
-}
-
-
-button {
-  height: 29px;
-  outline: none;
-  align-items: right;
-  font-size: 10pt;
-  padding: 7px;
-  border: 0px;
-  border-radius: 5px;
-  color: white;
-  font-weight: 200;
-  text-transform: uppercase;
-}
-
-button.reset{
-    background-color: red;
-    margin-right: 10px;
-}
-
-button.submit {
-  background-color: dodgerblue;
-}
-
-button.info {
-  background-color: orange;
-}
-
-select {
-  flex: 1;
-  outline: none;
-  background-color: #eeeeee;
-  font-size: 16px;
-  border: 0;
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
-.left {
-	text-align: left;
-}
-
-.center {
-	text-align: center;
+.countryFullWidth {
+  grid-column: 1/4;
 }
 
 .right {
-	text-align: right;
+  text-align: right;
 }
+
+/*# sourceMappingURL=style.css.map */

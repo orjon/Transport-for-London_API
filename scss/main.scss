@@ -1,0 +1,245 @@
+$color_TFL: rgb(000,025,168);
+$color_Emirates: rgb(220,036,031);
+$color_Buses: rgb(220,036,031);
+$color_DLR: rgb(000,175,173);
+$color_Overground: rgb(239,123,016);
+$color_Bakerloo: rgb(178,099,000);
+$color_Central: rgb(220,036,031);
+$color_Circle: rgb(255,211,041);
+$color_District: rgb(000,125,050);
+$color_Northern: rgb(000,000,000);
+$color_Metropolitan: rgb(155,000,088);
+$color_Jubilee: rgb(161,165,167);
+$color_Hammersmith: rgb(244,169,190);
+$color_Piccadilly: rgb(000,025,168);
+$color_Victoria: rgb(000,152,216);
+$color_Waterloo: rgb(147,206,186);
+
+
+$borderDev : 0px;
+$spacing: 20px;
+
+
+* {
+	box-sizing: border-box;
+  margin: 0px;
+	font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+h4 {
+  color: grey;
+  font-weight: 400;
+}
+
+
+
+body {
+	background-color: $color_TFL;
+	color: white;
+  padding: $spacing;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  border: $borderDev solid cyan;
+}
+
+header {
+  width: 400px;
+	border: $borderDev solid yellow;
+  margin-bottom: $spacing;
+}
+
+main {
+		color: black;
+    width: 400px;
+    flex: 1;
+    border: $borderDev solid yellow;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: $spacing;
+    grid-row-gap: $spacing;
+}
+
+
+footer {
+  margin: 10px 0px;
+	border: $borderDev solid yellow;
+  a {
+    color:white;
+  }
+}
+
+@media screen and (min-width: 860px){
+  header, footer {
+    width: 820px;
+  }
+  main {
+    width: 820px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1280px){
+  header, footer  {
+    width: 1240px;
+  }
+  main, footer  {
+    width: 1240px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1700px){
+  header, footer  {
+    width: 1660px;
+  }
+  main {
+    width: 1660px;
+    grid-template-columns: 1fr 1fr 1fr  1fr;
+  }
+}
+
+.card {
+  font-size: 12pt;
+  background-color: #eee;
+  border-radius: 00px;
+  /* border: 1px solid rgba(0, 0, 0,0.9); */
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
+  height: 100%;
+  padding: 1em;
+}
+
+.lines{
+
+  .line, form {
+    display: flex;
+    flex-direction: column;
+
+
+    .details {
+      border: $borderDev solid dodgerblue;
+      width: 100%;
+      height: 100%;
+
+      .row {
+        border: $borderDev solid lightblue;
+        display: flex;
+        flex-direction: row;
+
+      .labels {
+        width: 25%;
+        text-align: right;
+        padding-right: 7px;
+        font-weight: 600;
+      }
+      .data {
+        flex: 1;
+      }
+
+        img {
+
+          margin: 10px auto;
+          width: 50%;
+          box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+        }
+        p {
+          font-size: 0.8em;
+          border: $borderDev solid orange;
+          // max-width: 100px;
+          word-wrap: break-word;
+        }
+
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+.countryFullWidth {
+  grid-column: 1 / 4;
+}
+
+// .detail-row, .form-row {
+//     border: $borderDev solid lightblue;
+//     display: flex;
+// }
+//
+//
+// .detail-row label, .form-row label{
+//   padding-right: 10px;
+// }
+//
+// .detail-row input, .form-row input {
+//   font-size: 12pt;
+//   outline: none;
+//   flex: 1;
+//   height: 20px;
+// }
+//
+// .detail-row.last, .form-row.last {
+//   justify-content: flex-end;
+//   align-self: flex-end;
+//   margin-top: auto;
+// }
+//
+//
+// button {
+//   height: 29px;
+//   outline: none;
+//   align-items: right;
+//   font-size: 10pt;
+//   padding: 7px;
+//   border: 0px;
+//   border-radius: 5px;
+//   color: white;
+//   font-weight: 200;
+//   text-transform: uppercase;
+// }
+//
+// button.reset{
+//     background-color: red;
+//     margin-right: 10px;
+// }
+//
+// button.submit {
+//   background-color: dodgerblue;
+// }
+//
+// button.info {
+//   background-color: orange;
+// }
+//
+// select {
+//   flex: 1;
+//   outline: none;
+//   background-color: #eeeeee;
+//   font-size: 16px;
+//   border: 0;
+//   border-radius: 0;
+//   -webkit-appearance: none;
+// }
+//
+// .left {
+// 	text-align: left;
+// }
+//
+// .center {
+// 	text-align: center;
+// }
+//
+.right {
+	text-align: right;
+}
