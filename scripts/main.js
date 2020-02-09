@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
 
   window.onload = function (){
-    console.log('It is working!')
+    console.log('Transport for London API')
+    console.log('www.orjon.com')
 
     // document.getElementById('#id').addEventListener('click', buttonAction)
 
@@ -13,12 +14,11 @@ window.addEventListener('DOMContentLoaded', () => {
   //   $('#id').text('text')
   //}
 
-  console.log('City Mapper API')
   const $lines = $('.lines')
   var lines = []
 
   function getLines() {
-    console.log('getting specific countries')
+    console.log('Getting Line information')
     $.ajax({
       method: 'GET',
       url: 'https://api.tfl.gov.uk/line/mode/tube/status'
