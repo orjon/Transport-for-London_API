@@ -83,11 +83,11 @@ footer a {
 .card {
   font-size: 12pt;
   background-color: #eee;
-  border-radius: 0px;
+  border-radius: 15px;
   /* border: 1px solid rgba(0, 0, 0,0.9); */
   box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5);
-  height: 100%;
-  padding: 1em;
+  height: 200px;
+  padding: 10px;
 }
 
 .lines .line, .lines form {
@@ -97,15 +97,63 @@ footer a {
 .lines .line .details, .lines form .details {
   border: 0px solid dodgerblue;
   width: 100%;
-  height: 100%;
 }
 .lines .line .details .row, .lines form .details .row {
   border: 0px solid lightblue;
   display: flex;
   flex-direction: row;
 }
+.lines .line .details .row.lineColor, .lines form .details .row.lineColor {
+  height: 30px;
+  margin-bottom: 5px;
+  border-radius: 5px 5px 0 0;
+}
+.lines .line .details .row.Bakerloo, .lines form .details .row.Bakerloo {
+  background-color: #b26300;
+}
+.lines .line .details .row.Central, .lines form .details .row.Central {
+  background-color: #dc241f;
+}
+.lines .line .details .row.Circle, .lines form .details .row.Circle {
+  background-color: #ffd329;
+}
+.lines .line .details .row.District, .lines form .details .row.District {
+  background-color: #007d32;
+}
+.lines .line .details .row.Northern, .lines form .details .row.Northern {
+  background-color: black;
+}
+.lines .line .details .row.Metropolitan, .lines form .details .row.Metropolitan {
+  background-color: #9b0058;
+}
+.lines .line .details .row.Jubilee, .lines form .details .row.Jubilee {
+  background-color: #a1a5a7;
+}
+.lines .line .details .row.Hammersmith, .lines form .details .row.Hammersmith {
+  background-color: #f4a9be;
+}
+.lines .line .details .row.Piccadilly, .lines form .details .row.Piccadilly {
+  background-color: #0019a8;
+}
+.lines .line .details .row.Victoria, .lines form .details .row.Victoria {
+  background-color: #0098d8;
+}
+.lines .line .details .row.Waterloo, .lines form .details .row.Waterloo {
+  background-color: #93ceba;
+}
+.lines .line .details .row.lineName, .lines form .details .row.lineName {
+  margin-bottom: 5px;
+}
+.lines .line .details .row .name, .lines form .details .row .name {
+  border: 0px solid orange;
+}
+.lines .line .details .row .status, .lines form .details .row .status {
+  flex: 1;
+  text-align: right;
+  padding-top: 3px;
+}
 .lines .line .details .row .labels, .lines form .details .row .labels {
-  width: 25%;
+  width: 20%;
   text-align: right;
   padding-right: 7px;
   font-weight: 600;
@@ -119,7 +167,6 @@ footer a {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 .lines .line .details .row p, .lines form .details .row p {
-  font-size: 0.8em;
   border: 0px solid orange;
   word-wrap: break-word;
 }

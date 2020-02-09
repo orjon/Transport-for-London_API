@@ -34,16 +34,28 @@ window.addEventListener('DOMContentLoaded', () => {
   function displayLines() {
     $lines.empty()
     lines.forEach(line => {
+      var lineReason = ''
+      if (line.lineStatuses[0].reason) {
+        lineReason = line.lineStatuses[0].reason
+        var cropIndex = lineReason.indexOf(':') + 1
+        console.log(cropIndex)
+        lineReason = lineReason.substring(cropIndex)
+      }
+
+
+
+
       $lines.append(`
         <div class='card line'>
           <div class='details'>
-            <h3 class='row'>${line.name}</h3>
+            <div class='row lineColor ${line.name}'></div>
+            <div class='row lineName'>
+              <h3 class='name'>${line.name}</h3>
+              <p class='status'>${line.lineStatuses[0].statusSeverityDescription}</p>
+            </div>
             <div class='row'>
-              <div class='labels'>
-                <p>Service: </p>
-              </div>
               <div class='data'>
-                <p>${line.lineStatuses[0].statusSeverityDescription}</p>
+                <p>${lineReason}</p>
               </div>
             </div>
           </div>
@@ -56,32 +68,5 @@ window.addEventListener('DOMContentLoaded', () => {
   getLines()
 
 
+
 })
-
-
-
-  //
-  //
-  //
-  // console.log(countries[0])
-  //
-  // function displayCountries() {
-  //   $countries.empty()
-  //   countries.forEach(country => {
-  //
-  //
-  //     $countries.append(`
-  //       <div class='card country'>
-  //         <div class='details'>
-  //           <h3 class='row'><a href='https://en.wikipedia.org/wiki/${country.name}'>${country.name}&nbsp</a>(${country.alpha2Code})</h3>
-  //           <h4 class='row'>${country.nativeName}</h4>
-  //           <div class='row'>
-  //             <img src=${country.flag} alt="Flag of ${country.name}" />
-  //           </div>
-  //
-  //           <div class='row'>
-  //             <div class='labels'>
-  //               <p>Capital</p>
-  //             </div>
-  //             <div class='data'>
-  //               <p>${country.capita
