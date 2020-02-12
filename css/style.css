@@ -171,6 +171,10 @@ footer a {
   word-wrap: break-word;
 }
 
+.hidden {
+  display: none;
+}
+
 .countryFullWidth {
   grid-column: 1/4;
 }
